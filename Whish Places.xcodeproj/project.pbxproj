@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641B498EE50E220CF7BA55A7 /* Pods_Whish_Places.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCF6BF621CA05ACB7BCBE33 /* Pods_Whish_Places.framework */; };
 		E525EBBE24BBA3CE0062E581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525EBBD24BBA3CE0062E581 /* AppDelegate.swift */; };
 		E525EBC024BBA3CE0062E581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525EBBF24BBA3CE0062E581 /* SceneDelegate.swift */; };
 		E525EBC224BBA3CE0062E581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525EBC124BBA3CE0062E581 /* ViewController.swift */; };
@@ -21,18 +22,20 @@
 		E551FA8A25211D0200BA7A3E /* JsonPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FA8925211D0200BA7A3E /* JsonPictureModel.swift */; };
 		E551FA91252120EC00BA7A3E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E551FA90252120EC00BA7A3E /* NetworkService.swift */; };
 		E5720FF925DE8C560091266B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5720FF825DE8C560091266B /* SearchViewController.swift */; };
+		E5893B2125FBE3B500EEA241 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5893B1925FBC02100EEA241 /* Info.plist */; };
 		E5A01ECC25CF62DB0017FE9C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A01ECB25CF62DB0017FE9C /* Realm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E525EBBA24BBA3CE0062E581 /* HoboPl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoboPl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D22E26B98CB5DECDAA1C118 /* Pods-Whish Places.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whish Places.release.xcconfig"; path = "Target Support Files/Pods-Whish Places/Pods-Whish Places.release.xcconfig"; sourceTree = "<group>"; };
+		A3133A69E55CE72B9369D607 /* Pods-Whish Places.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whish Places.debug.xcconfig"; path = "Target Support Files/Pods-Whish Places/Pods-Whish Places.debug.xcconfig"; sourceTree = "<group>"; };
+		E525EBBA24BBA3CE0062E581 /* Wish Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wish Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E525EBBD24BBA3CE0062E581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E525EBBF24BBA3CE0062E581 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E525EBC124BBA3CE0062E581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E525EBC424BBA3CE0062E581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E525EBC624BBA3D50062E581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E525EBC924BBA3D50062E581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E525EBCB24BBA3D50062E581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E525EBED24BFBA6C0062E581 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E5435C5425845B9D001F5047 /* PlacePictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5435C5525845B9D001F5047 /* PlacePictureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacePictureCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -41,7 +44,9 @@
 		E551FA8925211D0200BA7A3E /* JsonPictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPictureModel.swift; sourceTree = "<group>"; };
 		E551FA90252120EC00BA7A3E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E5720FF825DE8C560091266B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E5893B1825FBC02100EEA241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		E5A01ECB25CF62DB0017FE9C /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		EFCF6BF621CA05ACB7BCBE33 /* Pods_Whish_Places.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whish_Places.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,25 +54,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641B498EE50E220CF7BA55A7 /* Pods_Whish_Places.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6698C7FC99320EC36CD8CE03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFCF6BF621CA05ACB7BCBE33 /* Pods_Whish_Places.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E525EBB124BBA3CE0062E581 = {
 			isa = PBXGroup;
 			children = (
 				E525EBBC24BBA3CE0062E581 /* Wish Places */,
 				E525EBBB24BBA3CE0062E581 /* Products */,
 				F8A43FA613AC6063D9F3B545 /* Pods */,
+				6698C7FC99320EC36CD8CE03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		E525EBBB24BBA3CE0062E581 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E525EBBA24BBA3CE0062E581 /* HoboPl.app */,
+				E525EBBA24BBA3CE0062E581 /* Wish Places.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,11 +93,12 @@
 				E525EBC624BBA3D50062E581 /* Assets.xcassets */,
 				E525EBBD24BBA3CE0062E581 /* AppDelegate.swift */,
 				E525EBBF24BBA3CE0062E581 /* SceneDelegate.swift */,
+				E525EBC324BBA3CE0062E581 /* Main.storyboard */,
 				E54AE0AF25F5797B00DAC180 /* View */,
 				E551FA8825211C9800BA7A3E /* Model */,
 				E54AE0BF25F930DE00DAC180 /* Services */,
 				E525EBC824BBA3D50062E581 /* LaunchScreen.storyboard */,
-				E525EBCB24BBA3D50062E581 /* Info.plist */,
+				E5893B1925FBC02100EEA241 /* Info.plist */,
 			);
 			path = "Wish Places";
 			sourceTree = "<group>";
@@ -112,7 +128,6 @@
 		E54AE0BF25F930DE00DAC180 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E525EBC324BBA3CE0062E581 /* Main.storyboard */,
 				E551FA90252120EC00BA7A3E /* NetworkService.swift */,
 			);
 			path = Services;
@@ -130,6 +145,8 @@
 		F8A43FA613AC6063D9F3B545 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A3133A69E55CE72B9369D607 /* Pods-Whish Places.debug.xcconfig */,
+				7D22E26B98CB5DECDAA1C118 /* Pods-Whish Places.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -141,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E525EBE424BBA3D50062E581 /* Build configuration list for PBXNativeTarget "Whish Places" */;
 			buildPhases = (
+				B9FBB8EF55B5417F9FA0FCDA /* [CP] Check Pods Manifest.lock */,
 				E525EBB624BBA3CE0062E581 /* Sources */,
 				E525EBB724BBA3CE0062E581 /* Frameworks */,
 				E525EBB824BBA3CE0062E581 /* Resources */,
+				C9A5E073EC1291ED7CDE9A78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,7 +170,7 @@
 			);
 			name = "Whish Places";
 			productName = HobPl;
-			productReference = E525EBBA24BBA3CE0062E581 /* HoboPl.app */;
+			productReference = E525EBBA24BBA3CE0062E581 /* Wish Places.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,11 +215,54 @@
 				E525EBCA24BBA3D50062E581 /* LaunchScreen.storyboard in Resources */,
 				E525EBC724BBA3D50062E581 /* Assets.xcassets in Resources */,
 				E525EBC524BBA3CE0062E581 /* Main.storyboard in Resources */,
+				E5893B2125FBE3B500EEA241 /* Info.plist in Resources */,
 				E5435C5725845B9D001F5047 /* PlacePictureCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9FBB8EF55B5417F9FA0FCDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whish Places-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9A5E073EC1291ED7CDE9A78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whish Places/Pods-Whish Places-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whish Places/Pods-Whish Places-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whish Places/Pods-Whish Places-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E525EBB624BBA3CE0062E581 /* Sources */ = {
@@ -239,6 +301,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		E5893B1925FBC02100EEA241 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5893B1825FBC02100EEA241 /* Base */,
+			);
+			name = Info.plist;
+			path = "Wish Places";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -361,18 +432,19 @@
 		};
 		E525EBE524BBA3D50062E581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3133A69E55CE72B9369D607 /* Pods-Whish Places.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZXWNP3PM;
-				INFOPLIST_FILE = HobPl/Info.plist;
+				INFOPLIST_FILE = "Wish Places/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hobpl;
-				PRODUCT_NAME = HoboPl;
+				PRODUCT_BUNDLE_IDENTIFIER = "Wish Places";
+				PRODUCT_NAME = "Wish Places";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,18 +453,19 @@
 		};
 		E525EBE624BBA3D50062E581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D22E26B98CB5DECDAA1C118 /* Pods-Whish Places.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZXWNP3PM;
-				INFOPLIST_FILE = HobPl/Info.plist;
+				INFOPLIST_FILE = "Wish Places/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hobpl;
-				PRODUCT_NAME = HoboPl;
+				PRODUCT_BUNDLE_IDENTIFIER = "Wish Places";
+				PRODUCT_NAME = "Wish Places";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

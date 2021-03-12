@@ -28,7 +28,7 @@ class NoteOfPlaceViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        try! self.realm.write{
+        try! self.realm.write {
             self.dataOfPlaces[placeIndex].itemNote = noteOfPlaceTextView.text
         }
     }

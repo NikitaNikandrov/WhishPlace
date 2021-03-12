@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//Mark: model for images API
 class JsonPicture {
     struct ResponcePicture : Decodable {
         let total, totalHits: Int?
@@ -35,7 +35,7 @@ class JsonPicture {
         }
     }
 }
-
+//Mark: model for geo API
 class JsonDataOfPlaces {
     
     struct AllData: Decodable {

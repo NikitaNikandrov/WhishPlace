@@ -14,7 +14,3 @@ class NoteOfPlace: Object {
     @objc dynamic var itemName = ""
     @objc dynamic var itemNote = ""
 }
-
-class NamesArray: Object {
-    var namesArray = List<String>()
-}

@@ -12,13 +12,13 @@ import SkeletonView
 class DetailViewController: UIViewController {
     
     let networkService = NetworkService()
-    var selectedPlaceName = "" // имя выбранного места, передается при нажатии на ячейку головного table view
-    var indexOfItem = 0
-    var imageURLs: [String] = []
+    var selectedPlaceName = "" //Mark: Name of Item, got from ViewController
+    var indexOfItem = 0 //Mark: index of Item, it uses in NoteOfPlaceVC
+    var imageURLs: [String] = [] //Mark: array of images URLs, uses in collectionview cell
     
     @IBOutlet weak var placePictureCollectionView: UICollectionView!
     @IBOutlet weak var noteButton: UIButton!
-    
+    //Mark: when button is pressed, it shows NoteOfPlaceVC
     @IBAction func noteButtonIsPressed(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let noteOfPlaceViewController = storyboard.instantiateViewController(identifier: "NoteOfPlaceViewController") as? NoteOfPlaceViewController else { return }
@@ -47,17 +47,15 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    
+    //Mark: making a title for note button
     func firstSetupDeteilViewController() {
         let title = "My notes of " + self.selectedPlaceName
         self.noteButton.setTitle(title, for: .normal)
     }
-    
+    //Mark: when array of URLs is empty
     func getErrorPictureAllertController() {
         let errorPictureAllert = UIAlertController(title: "Could't find a picture :(", message: nil, preferredStyle: .alert)
-        let okBtn = UIAlertAction(title: "Ok", style: .default) { (alert) in
-            // ничего не делается по кнопке ок
-        }
+        let okBtn = UIAlertAction(title: "Ok", style: .default) { (alert) in }
         errorPictureAllert.addAction(okBtn)
         DispatchQueue.main.async {
             self.present(errorPictureAllert, animated: true, completion: nil)
@@ -91,7 +89,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
+    //Mark: when image was selected - show it in BigPictureVC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let bigPictureVC = storyboard.instantiateViewController(identifier: "BigPictureViewController") as? BigPictureViewController else { return }

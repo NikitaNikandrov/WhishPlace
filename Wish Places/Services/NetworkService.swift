@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkService {
-    
+    //Mark: for images API
     func getPictureURL(name: String, closure: @escaping(([String]?) -> Void)) { // выдает в замыкание массив из ссылок на картинки
         
         var resultResponce : JsonPicture.ResponcePicture?
@@ -48,7 +48,7 @@ class NetworkService {
             } catch let error { print(error) }
         } .resume()
     }
-    
+    //Mark: for Geo API
     func loadDataOfPlaces(closure: @escaping(([String]?) -> Void)) {
         
         var jsonResult = JsonDataOfPlaces.AllData.init(data: [JsonDataOfPlaces.Datum].init(), links: [JsonDataOfPlaces.Link].init(), metadata: JsonDataOfPlaces.Metadata.init(currentOffset: 0, totalCount: 0))

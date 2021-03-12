@@ -39,7 +39,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         resultTableView.dataSource = self
         
         closeButton.setTitle("Close", for: .normal)
-        
+        //Mark: load array of cities names from geo api
         networkService.loadDataOfPlaces { [self] (data) in
         
             guard let data = data else { return }
@@ -52,7 +52,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        //Mark: filtering search text and array of loaded names
         if searchText.isEmpty == false {
                 filteredNames = namesArray.filter({ $0.contains(searchText) })
         } else {
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         }
         resultTableView.reloadData()
     }
-    
+    //Mark: whith search button on keyboard adding new item to Realm, update data in ViewController
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBarForNewItems.resignFirstResponder()
         guard let addingName = searchBar.text else { return }
@@ -86,7 +86,7 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = filteredNames[indexPath.row]
         return cell
     }
-    
+    //Mark: adding new item from filtered data pressing to tableview cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let indexPath = resultTableView.indexPathForSelectedRow else { return }

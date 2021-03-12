@@ -14,18 +14,18 @@ protocol UpdateViewController {
 }
 
 class ViewController: UIViewController, UpdateViewController {
-    
+    //Mark: Realm
     let realm = try! Realm()
-    var dataOfPlaces: Results<NoteOfPlace>! // контейнер свойств реалм
+    var dataOfPlaces: Results<NoteOfPlace>!
     
     @IBOutlet weak var myPlacesTable: UITableView!
     
     @IBAction func pushAdd(_ sender: Any) {
-        
+        //Mark: going to SearchVC pushing add button
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        guard let noteOfPlaceViewController = storyboard.instantiateViewController(identifier: "SearchViewController") as? SearchViewController else { return }
-        noteOfPlaceViewController.delegateVC = self
-        self.present(noteOfPlaceViewController, animated: true, completion: nil)
+        guard let searchVC = storyboard.instantiateViewController(identifier: "SearchViewController") as? SearchViewController else { return }
+        searchVC.delegateVC = self
+        self.present(searchVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -33,9 +33,10 @@ class ViewController: UIViewController, UpdateViewController {
         
         myPlacesTable.delegate = self
         myPlacesTable.dataSource = self
+        //Mark: download data from Realm
         dataOfPlaces = realm.objects(NoteOfPlace.self)
     }
-    
+    //Mark: this method updates ViewCintroller when in SearchVC added new item
     func updateVC() {
         DispatchQueue.main.async {
             self.realm.refresh()
@@ -43,7 +44,7 @@ class ViewController: UIViewController, UpdateViewController {
         }
         myPlacesTable.reloadData()
     }
-    
+    //Mark: going to DetailVC when tebleview cell was pushed
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let detailVC = storyboard.instantiateViewController(identifier: "DeteilViewController") as? DetailViewController else { return }
@@ -55,9 +56,8 @@ class ViewController: UIViewController, UpdateViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         show(detailVC, sender: nil)
     }
-    
+    //Mark: delete tableview cell whith swipe
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // функция удаления ячейки таблицы
         if editingStyle == .delete {
             try! self.realm.write{
                 let dellItem = dataOfPlaces[indexPath.row]
@@ -80,7 +80,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeNameCell", for: indexPath)
-        let item = dataOfPlaces[indexPath.row] // создаем экземпляр по индексу из массива реалм
+        let item = dataOfPlaces[indexPath.row]
         cell.textLabel?.text = item.itemName
         return cell
     }

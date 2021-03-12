@@ -13,8 +13,8 @@ class BigPictureViewController: UIViewController {
     
     @IBOutlet weak var bigPictureCollectionView: UICollectionView!
     
-    var imageURLs: [String]?
-    var selectedItemIndex: Int?
+    var imageURLs: [String]? //Mark: URLs array
+    var selectedItemIndex: Int? //Mark: index of image which will be shown first
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class BigPictureViewController: UIViewController {
         
         collectionViewFirstSetup()
     }
-    
+    //Mark: method to show first image with selected index
     func collectionViewFirstSetup() {
         self.bigPictureCollectionView.layoutIfNeeded()
         self.bigPictureCollectionView.scrollToItem(at: IndexPath(item: selectedItemIndex!, section: 0), at: .left, animated: true)
