@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-protocol UpdateVCProtocol {
+protocol UpdateVCProtocol: AnyObject {
     func updateVC()
 }
 
