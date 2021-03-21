@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
    
     var networkService = NetworkService()
     
-    var delegateVC: ViewController?
+    var delegateVC: UpdateViewControllerProtocol?
     
     let realm = try! Realm()
     var dataOfPlaces: Results<NoteOfPlace>!

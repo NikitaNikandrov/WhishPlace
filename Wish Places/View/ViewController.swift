@@ -9,11 +9,11 @@
 import UIKit
 import RealmSwift
 
-protocol UpdateViewController {
+protocol UpdateViewControllerProtocol {
     func updateVC()
 }
 
-class ViewController: UIViewController, UpdateViewController {
+class ViewController: UIViewController, UpdateViewControllerProtocol {
     //Mark: Realm
     let realm = try! Realm()
     var dataOfPlaces: Results<NoteOfPlace>!
